@@ -8,12 +8,12 @@ workflows:
 jobs:
   test:
     docker:
-      - image: img/node:15.11.0
-      steps:
-        - checkout
-        - run:
+      - image: cimg/node:15.11.0
+    steps:
+      - checkout
+      - run:
           name: Install dependencies
           command: npm install
-        - run:
+      - run:
           name: Run Tests
           command: npm run test
